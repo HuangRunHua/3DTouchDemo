@@ -41,7 +41,7 @@ class detailCellTableViewController: UITableViewController {
         // 动态计算detailLabel的方法，根据detailLabel里面的字符计算detailLabel的高度
         if indexPath == [0,0] {
             let size = (detailLabel.text! as NSString).boundingRect(with: CGSize(width: self.imageView.frame.width, height: CGFloat.greatestFiniteMagnitude), options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17)], context: nil)
-            return titleLabel.frame.height + imageView.frame.height + size.height + 32
+            return titleLabel.frame.height + imageView.frame.height + size.height + 40
         } else {
             return 44
         }
