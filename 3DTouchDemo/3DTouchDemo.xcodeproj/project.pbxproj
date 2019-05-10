@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0404402A2285820F00998BDB /* TableViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040440292285820F00998BDB /* TableViewControllerExtension.swift */; };
-		040440332285A55200998BDB /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = 040440322285A55200998BDB /* 10.png */; };
 		043FAE10228540B400774425 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FAE0F228540B400774425 /* AppDelegate.swift */; };
 		043FAE15228540B400774425 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 043FAE13228540B400774425 /* Main.storyboard */; };
 		043FAE17228540B500774425 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 043FAE16228540B500774425 /* Assets.xcassets */; };
@@ -18,11 +17,11 @@
 		043FAE262285435E00774425 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FAE252285435E00774425 /* TableViewController.swift */; };
 		043FAE282285603F00774425 /* detailCellTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FAE272285603F00774425 /* detailCellTableViewController.swift */; };
 		043FAE2A2285605D00774425 /* detailImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FAE292285605D00774425 /* detailImageViewController.swift */; };
+		04F9030D2285A84600BD19D7 /* demoPicture.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04F9030C2285A84600BD19D7 /* demoPicture.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		040440292285820F00998BDB /* TableViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerExtension.swift; sourceTree = "<group>"; };
-		040440322285A55200998BDB /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
 		043FAE0C228540B400774425 /* 3DTouchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3DTouchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		043FAE0F228540B400774425 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		043FAE14228540B400774425 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -34,6 +33,7 @@
 		043FAE252285435E00774425 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		043FAE272285603F00774425 /* detailCellTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailCellTableViewController.swift; sourceTree = "<group>"; };
 		043FAE292285605D00774425 /* detailImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailImageViewController.swift; sourceTree = "<group>"; };
+		04F9030C2285A84600BD19D7 /* demoPicture.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = demoPicture.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +93,7 @@
 		043FAE03228540B400774425 = {
 			isa = PBXGroup;
 			children = (
-				040440322285A55200998BDB /* 10.png */,
+				04F9030C2285A84600BD19D7 /* demoPicture.jpg */,
 				043FAE0E228540B400774425 /* 3DTouchDemo */,
 				043FAE0D228540B400774425 /* Products */,
 			);
@@ -182,8 +182,8 @@
 			files = (
 				043FAE1A228540B500774425 /* LaunchScreen.storyboard in Resources */,
 				043FAE17228540B500774425 /* Assets.xcassets in Resources */,
-				040440332285A55200998BDB /* 10.png in Resources */,
 				043FAE15228540B400774425 /* Main.storyboard in Resources */,
+				04F9030D2285A84600BD19D7 /* demoPicture.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
