@@ -17,7 +17,14 @@
 
 ## 主屏幕交互
 在主屏幕上, 按下支持3D 触摸的应用图标将显示操作视图。通过此视图, 您可以快速执行常见的特定于应用程序的任务, 并查看有趣的信息。
-一般的实现方法是在AppDelegate.swift文件里面进行初始化。
+一般的实现方法是在AppDelegate.swift文件里面进行初始化，你也可以选择在info.split文件里面进行配置。
+下面解释一下需要用到的成员变量：
+- UIApplicationShortcutItemType: 快捷可选项的特定字符串(必填)
+- UIApplicationShortcutItemTitle: 快捷可选项的标题(必填)
+- UIApplicationShortcutItemSubtitle: 快捷可选项的子标题(可选)
+- UIApplicationShortcutItemIconType: 快捷可选项的图标(可选)
+- UIApplicationShortcutItemIconFile: 快捷可选项的自定义图标(可选)
+- UIApplicationShortcutItemUserInfo: 快捷可选项的附加信息(可选)
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         /* 添加3D Touch的功能, 在这里先添加了创建新事项的功能 */
@@ -74,7 +81,7 @@ func application(_ application: UIApplication, performActionFor shortcutItem: UI
 ```
 回到触发peek的界面，添加相应的代理
 ```swift
- /**
+   /**
       isImagePeekAndPop这个变量用来判断是需要peek图片还是pop，当为true的时候peek图片
       它的值将会决定previewingContext(_ previewingContext:, commit viewControllerToCommit)里面使用show()还是present()
     */
@@ -89,7 +96,7 @@ func application(_ application: UIApplication, performActionFor shortcutItem: UI
             return nil
         }
         
-        /**
+       /**
           在这里判断点击了图片的区域还是图片以外的区域，通过计算触摸点的位置(x,y)来判断
           如果 (触摸点所在的x值<=图片起始x值) && (触摸点所在的x值>=图片末尾x值) && (触摸点所在的y值<=图片起始y值) && (触摸点所在的y值>=图片末尾y值)
           那么触摸点就在图片上，此时要peek的是图片而不是cell
@@ -129,10 +136,10 @@ func application(_ application: UIApplication, performActionFor shortcutItem: UI
 并不是每个peek都需要动作按钮, 但它们是为常见任务提供快捷方式的好方法。如果你的应用已经为项目提供了自定义的触摸和保留操作, 则在偷看过程中包含相同的操作是一种很好的做法。
 在你预览所对应的视图里面重写 *previewActionItems: [UIPreviewActionItem]* 元素，例如这是预览照片所对应的分享操作
 ```swift
-/**
+  /**
      @previewActionItems: [UIPreviewActionItem]
      当用户在3D Touch预览上向上滑动时显示的快速操作
-     */
+    */
     override var previewActionItems: [UIPreviewActionItem] {
         let sharePreviewAction = UIPreviewAction(title: "Share...", style: .default, handler: {(_, _) in
             guard let image = self.image else { return }
@@ -142,12 +149,12 @@ func application(_ application: UIApplication, performActionFor shortcutItem: UI
         return [sharePreviewAction]
     }
 ```
-还有，这是预览详细内容下面的动作按钮
+还有，这是peek表格内容的时候下面出现的动作按钮
 ```swift
-/**
+  /**
      @previewActionItems: [UIPreviewActionItem]
      当用户在3D Touch预览上向上滑动时显示的快速操作
-     */
+    */
     override var previewActionItems: [UIPreviewActionItem] {
         let action1 = UIPreviewAction(title: "测试1", style: .default) { (_, _) in
             // 在这里做你觉得对的事
